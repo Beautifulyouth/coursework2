@@ -92,11 +92,11 @@ class Game extends Phaser.State {
 		dust.setAlpha(1, 0, 3000, Phaser.Easing.Quintic.Out);
     this.dust = dust;
     
-    // 分数，放到后面，越晚加入越在上层
+    // Score，放到后面，越晚加入越在上层
     const scoreText = this.add.text(
       gameOptions.width - 20,
       10,
-      '分数 ' + this.score, 
+      'Score ' + this.score, 
       {
         font: this.screenWidthRatio * 30 + 'px Arial', 
         fill: '#ffffff'
@@ -278,7 +278,7 @@ class Game extends Phaser.State {
             Math.sin(this.rocket.landed.angle + asteroid.rotation);
           dust.start(true, 2000, 0, 20, true);
           this.score = Math.floor(-rocket.y + gameOptions.scoreInit);
-          this.scoreText.setText('分数 ' + this.score);
+          this.scoreText.setText('Score ' + this.score);
         }
       });
       

@@ -51,7 +51,9 @@ class Restart extends Phaser.State {
     const scoreText = this.add.text(
       50 * screenWidthRatio, 
       gameOptions.height / 6 * 5, 
-      '本局得分 ' + gameOptions.score + '\n历史最高 ' + bestScore, 
+      'The bureau score'
+  + gameOptions.score + '\n Highest score in history'
+  + bestScore, 
       { 
         font: "40px Arial", 
         fill: "#ffffff"
