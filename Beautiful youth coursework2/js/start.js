@@ -9,7 +9,7 @@ const gameOptions = {
   score: 0,
   // 屏幕宽高
   width: 750,
-  height: 1334,
+  height: 1344,
   // 重力
   gravity: 200,
   // 墙
@@ -107,7 +107,7 @@ class Start extends Phaser.State {
     title.height *= 0.8 * screenHeightRatio;
     title.anchor.set(0.5);
     this.add.tween(title).to( 
-      {y: gameOptions.height / 4}, 
+      {y: gameOptions.height / 3}, 
       1500, 
       Phaser.Easing.Sinusoidal.InOut, 
       true, 0, -1, true);

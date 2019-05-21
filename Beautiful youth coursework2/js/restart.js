@@ -9,8 +9,8 @@ class Restart extends Phaser.State {
     // 禁止物理引擎作用
     this.world.setBounds(0, 0, 0, 0);
     // 屏幕缩放
-    const screenWidthRatio = gameOptions.width / 480;
-    const screenHeightRatio = gameOptions.height / 640;
+    const screenWidthRatio = gameOptions.width / 485;
+    const screenHeightRatio = gameOptions.height / 645;
     // 生成sprite
     // 星星闪烁
     const skybox = this.add.sprite(0, 0, 'skybox');
