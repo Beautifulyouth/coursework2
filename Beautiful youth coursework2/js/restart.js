@@ -19,8 +19,8 @@ class Restart extends Phaser.State {
     const twinkle = skybox.animations.add('twinkle');
     skybox.animations.play('twinkle', 3, true);
     // 空间站
-    const station = this.add.sprite(gameOptions.width / 2, gameOptions.height / 2, 'station');
-    station.scale.set(screenHeightRatio * 0.5);
+    const station = this.add.sprite(gameOptions.width / 2, gameOptions.height / 1.9, 'station');
+    station.scale.set(screenHeightRatio * 0.4);
     station.anchor.setTo(0.5, 0.5);
     this.add.tween(station).to(
       {rotation: Math.PI * 2}, 
@@ -31,17 +31,17 @@ class Restart extends Phaser.State {
     const fire = this.add.sprite(0, gameOptions.height * 0.98, 'fire');
     fire.width = gameOptions.width;
     this.add.tween(fire).to( 
-      {y: gameOptions.height * 0.9}, 
+      {y: gameOptions.height * 0.6}, 
       1000, 
       Phaser.Easing.Sinusoidal.InOut, 
       true, 0, -1, true);
     // GameOver
     const gameover = this.add.sprite(gameOptions.width / 2, 0, 'over');
     gameover.width *= 0.98 * screenWidthRatio;
-    gameover.height *= 0.8 * screenHeightRatio;
+    gameover.height *= 1.2 * screenHeightRatio;
 		gameover.anchor.x = 0.5;
 		this.add.tween(gameover).to( 
-      {y: gameOptions.height / 8}, 
+      {y: gameOptions.height / 3.5}, 
       1500, 
       Phaser.Easing.Bounce.Out, 
       true
@@ -50,12 +50,10 @@ class Restart extends Phaser.State {
     const bestScore = localStorage.getItem('bestScore');
     const scoreText = this.add.text(
       50 * screenWidthRatio, 
-      gameOptions.height / 6 * 5, 
-      'The bureau score'
-  + gameOptions.score + '\n Highest score in history'
-  + bestScore, 
+      gameOptions.height / 4 * 2.7, 
+      'Bureau score ' + gameOptions.score + '\nHighest score ' + bestScore, 
       { 
-        font: "40px Arial", 
+        font: "32px Arial", 
         fill: "#ffffff"
       }
     );
@@ -65,7 +63,7 @@ class Restart extends Phaser.State {
 
     const restart = this.add.sprite(
       gameOptions.width - 80 * screenWidthRatio, 
-      gameOptions.height / 6 * 5, 
+      gameOptions.height / 4 * 2.7, 
       'restart'
     );
 		restart.scale.setTo(0.4 * screenWidthRatio);

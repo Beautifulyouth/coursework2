@@ -92,7 +92,7 @@ class Game extends Phaser.State {
 		dust.setAlpha(1, 0, 3000, Phaser.Easing.Quintic.Out);
     this.dust = dust;
     
-    // Score，放到后面，越晚加入越在上层
+    // 分数，放到后面，越晚加入越在上层
     const scoreText = this.add.text(
       gameOptions.width - 20,
       10,

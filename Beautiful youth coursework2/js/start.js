@@ -107,7 +107,7 @@ class Start extends Phaser.State {
     title.height *= 0.8 * screenHeightRatio;
     title.anchor.set(0.5);
     this.add.tween(title).to( 
-      {y: gameOptions.height / 4}, 
+      {y: gameOptions.height / 2}, 
       1500, 
       Phaser.Easing.Sinusoidal.InOut, 
       true, 0, -1, true);
